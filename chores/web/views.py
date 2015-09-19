@@ -6,9 +6,19 @@ def home(request):
     template = 'home.html'
     return render(request, template, context)
 
-def members(request):
+def creategroup(request):
     context = {}
-    template = 'members.html'
+    template = 'creategroup.html'
+    return render(request, template, context)
+
+def addmembers(request):
+    context = {}
+    template = 'addmembers.html'
+    return render(request, template, context)
+
+def main(request):
+    context = {}
+    template = 'main.html'
     return render(request, template, context)
 
 def logout(request):
