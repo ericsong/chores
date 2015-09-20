@@ -37,7 +37,8 @@ INSTALLED_APPS = (
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'social.apps.django_app.default'
+    'social.apps.django_app.default',
+    'web'
 )
 
 MIDDLEWARE_CLASSES = (
@@ -80,7 +81,7 @@ SOCIAL_AUTH_FACEBOOK_KEY = os.environ['FACEBOOK_KEY']
 SOCIAL_AUTH_FACEBOOK_SECRET = os.environ['FACEBOOK_SECRET']
 SOCIAL_AUTH_FACEBOOK_SCOPE = ['email']
 
-LOGIN_REDIRECT_URL = '/members'
+LOGIN_REDIRECT_URL = '/create/group'
 
 # Database
 # https://docs.djangoproject.com/en/1.8/ref/settings/#databases

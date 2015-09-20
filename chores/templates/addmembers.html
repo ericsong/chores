@@ -1,7 +1,29 @@
 <html>
   <body>
+    <h3>This is the add members page</h3>
     <p>Add people to your apartment!</p>
-    <a href='/main'>Done!</a>
+
+    <h4> Adding these people... </h4>
+    <ul>
+      <li> christine </li>
+      <li> kristian </li>
+    </ul>
+
+    <form id="form" action="/main"></form>
+    <button id="submit">Done!</button>
   </body>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  <script>
+    var people = ['christine', 'kristian']
+    $('#submit').click(function() {
+        $('#form').append(
+            $('<input />').attr('type', 'hidden'
+            ).attr('name', 'people'
+            ).attr('value', people)
+        )
+        $('#form').submit()
+    })
+  </script>
 </html>
 

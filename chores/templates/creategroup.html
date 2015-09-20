@@ -1,7 +1,38 @@
 <html>
   <body>
     <p>User's name and surname: {{ user.first_name }} {{ user.last_name}}</p>
-    <a href="/add/members">next!</a>
+    <h3>This is the create a group page</h3>
+
+    <h4> Tracking these chores... </h4>
+    <ul>
+      <li> Garbage </li>
+      <li> Dishes </li>
+      <li> Groceries </li>
+    </ul>
+    <form id="form" method="post" action="/create/group/submit">
+      {% csrf_token %}
+      Name of group: <input type="text" name="name">
+      </br>
+      <button id="submit">next!</button>
+    </form>
   </body>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  <script>
+    var chores = ['garbage', 'dishes', 'groceries']
+
+    $('#submit').click(function() {
+        for(var i = 0; i < chores.length; i++) {
+            var chore = chores[i]
+            $('#form').append(
+                $('<input />').attr('type', 'hidden'
+                ).attr('name', 'chores'
+                ).attr('value', chore)
+            )
+        }
+
+        $('#form').submit()
+    })
+  </script>
 </html>
 

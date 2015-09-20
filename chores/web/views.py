@@ -1,5 +1,6 @@
 from django.shortcuts import render, redirect
 from django.contrib.auth import logout as auth_logout
+from web.models import Group, Chore
 
 def home(request):
     context = {}
@@ -11,12 +12,18 @@ def creategroup(request):
     template = 'creategroup.html'
     return render(request, template, context)
 
-def addmembers(request):
-    context = {}
-    template = 'addmembers.html'
-    return render(request, template, context)
+def creategroup_submit(request):
+    newGroup = Group()
+    newGroup.save()
+
+    for chore in request.POST.getlist('chores'):
+        newChore = Chore(group=newGroup, text=chore)
+        newChore.save()
+
+    return render(request, 'addmembers.html', {})
 
 def main(request):
+    print(request.GET)
     context = {}
     template = 'main.html'
     return render(request, template, context)
