@@ -11,4 +11,4 @@ class Chore(models.Model):
 
 class ChoresUser(models.Model):
     user = models.OneToOneField(User, on_delete=models.CASCADE)
-    group = models.ForeignKey(Group)
+    group = models.ForeignKey(Group, blank=True, null=True)

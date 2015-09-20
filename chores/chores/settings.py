@@ -81,7 +81,7 @@ SOCIAL_AUTH_FACEBOOK_KEY = os.environ['FACEBOOK_KEY']
 SOCIAL_AUTH_FACEBOOK_SECRET = os.environ['FACEBOOK_SECRET']
 SOCIAL_AUTH_FACEBOOK_SCOPE = ['email']
 
-LOGIN_REDIRECT_URL = '/create/group'
+LOGIN_REDIRECT_URL = '/newuser'
 
 # Database
 # https://docs.djangoproject.com/en/1.8/ref/settings/#databases

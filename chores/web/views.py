@@ -1,11 +1,22 @@
 from django.shortcuts import render, redirect
 from django.contrib.auth import logout as auth_logout
-from web.models import Group, Chore
+from django.contrib.auth.models import User
+from web.models import Group, Chore, ChoresUser
 
 def home(request):
     context = {}
     template = 'home.html'
     return render(request, template, context)
+
+def newuser(request):
+    print(request.user)
+    print(request.user.id)
+    if not ChoresUser.objects.filter(user=request.user).exists():
+        newChoresUser = ChoresUser(user=request.user)
+        newChoresUser.save()
+        return render(request, 'creategroup.html', {})
+    else:
+        return render(request, 'main.html', {})
 
 def creategroup(request):
     context = {}
