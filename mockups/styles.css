@@ -24,7 +24,6 @@ body {
 	width: 900px;
 	margin: 0 auto;
 	background-color: #9CB5B2;
-	background-color: #9CB5B2;
 	border-width: 5px 5px 0px 5px;
 	border-style: solid;
 	border-color: #774E39;
@@ -81,3 +80,9 @@ h1 {
 .star {
 	height:50px;
 }
+
+/*dialog css*/
+li{
+	list-style-type: none;
+}
+
