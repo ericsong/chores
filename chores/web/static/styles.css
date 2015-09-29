@@ -1,0 +1,88 @@
+html {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+*, *:before, *:after {
+	-webkit-box-sizing: inherit;
+	-moz-box-sizing: inherit;
+	box-sizing: inherit;
+}
+
+body {
+	font-family: Arial;
+	font-size: 24px;
+	background-color: #FFF2E0;
+}
+
+.img-circle {
+	border-radius: 50%;
+	width: 60px;
+	height: 60px;
+}
+#banner {
+	width: 900px;
+	margin: 0 auto;
+	background-color: #9CB5B2;
+	border-width: 5px 5px 0px 5px;
+	border-style: solid;
+	border-color: #774E39;
+}
+
+#wrapper {
+	height: 540px;
+	width: 900px;
+	margin: 0 auto;
+	position: relative;
+	top: -32px;
+	background-color: #9CB5B2;
+	border-width: 0px 5px 5px 5px;
+	border-style: solid;
+	border-color: #774E39;
+}
+
+h1 {
+	color: #413E4A;
+	text-align: center;
+}
+#content {
+	height: 540px;
+	padding: 10px;
+	display: table-cell;
+	vertical-align: middle;
+}
+.userrow{
+	display: table;
+	width: 100%;
+	table-layout: fixed;
+}
+.col {
+	display: table-cell;
+	height: 100px;
+}
+.userinfo {
+	vertical-align: top;
+	display: inline-block;
+	text-align: center;
+	width: 115px;
+}
+.name {
+	display:block;
+	font-size: 14px;
+	padding-bottom: 5px;
+}
+
+.starcount{
+	width: 750px;
+	vertical-align: middle;
+	color: #FDE0B6;
+}
+.star {
+	height:50px;
+}
+
+/*dialog css*/
+li{
+	list-style-type: none;
+}
+
