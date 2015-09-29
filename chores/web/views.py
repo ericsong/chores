@@ -27,6 +27,11 @@ def creategroup_submit(request):
     newGroup = Group()
     newGroup.save()
 
+    #update user with newly created group
+    current_user = ChoresUser.objects.get(user=request.user);
+    current_user.group_id = newGroup.id;
+    current_user.save();
+
     for chore in request.POST.getlist('chores'):
         newChore = Chore(group=newGroup, text=chore)
         newChore.save()
