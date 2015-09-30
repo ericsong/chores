@@ -9,7 +9,7 @@
       <li> Dishes </li>
       <li> Groceries </li>
     </ul>
-    <form id="form" method="post" action="/create/group/submit">
+    <form id="form" method="post" action="/create/group/submit/">
       {% csrf_token %}
       Name of group: <input type="text" name="name">
       </br>

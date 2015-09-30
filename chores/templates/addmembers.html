@@ -9,7 +9,10 @@
       <li> kristian </li>
     </ul>
 
-    <form id="form" action="/main"></form>
+    <form id="form" method="post" action="/add/members/">
+        {% csrf_token %}
+    </form>
+
     <button id="submit">Done!</button>
   </body>
 

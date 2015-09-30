@@ -38,8 +38,14 @@ def creategroup_submit(request):
 
     return render(request, 'addmembers.html', {})
 
+def addmembers(request):
+    print(request.POST)
+    context = {}
+    template = 'main.html'
+    return render(request, template, context)
+
 def main(request):
-    print(request.GET)
+    print(request.POST)
     context = {}
     template = 'main.html'
     return render(request, template, context)
