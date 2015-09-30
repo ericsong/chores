@@ -22,8 +22,6 @@ urlpatterns = patterns('',
     url(r'^$', 'web.views.home', name='home'),
     url(r'^newuser/', 'web.views.newuser', name='newuser'),
     url(r'^create/group/submit/', 'web.views.creategroup_submit', name='creategroup_submit'),
-    url(r'^create/group/', 'web.views.creategroup', name='creategroup'),
     url(r'^add/members/', 'web.views.addmembers', name='addmembers'),
-    url(r'^main/', 'web.views.main', name='main'),
     url(r'^logout/$', 'web.views.logout', name='logout'),
 )

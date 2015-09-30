@@ -18,11 +18,6 @@ def newuser(request):
     else:
         return render(request, 'main.html', {})
 
-def creategroup(request):
-    context = {}
-    template = 'creategroup.html'
-    return render(request, template, context)
-
 def creategroup_submit(request):
     newGroup = Group()
     newGroup.save()
@@ -39,12 +34,6 @@ def creategroup_submit(request):
     return render(request, 'addmembers.html', {})
 
 def addmembers(request):
-    print(request.POST)
-    context = {}
-    template = 'main.html'
-    return render(request, template, context)
-
-def main(request):
     print(request.POST)
     context = {}
     template = 'main.html'
