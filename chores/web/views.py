@@ -18,7 +18,7 @@ def newuser(request):
     else:
         return render(request, 'main.html', {})
 
-def creategroup_submit(request):
+def creategroup(request):
     newGroup = Group()
     newGroup.save()
 
