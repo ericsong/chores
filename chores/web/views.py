@@ -39,6 +39,12 @@ def addmembers(request):
     template = 'main.html'
     return render(request, template, context)
 
+def main(request):
+    print(request.POST)
+    context = {}
+    template = 'main.html'
+    return render(request, template, context)
+
 def logout(request):
     auth_logout(request)
     return redirect('/')
