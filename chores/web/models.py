@@ -12,3 +12,8 @@ class Chore(models.Model):
 class ChoresUser(models.Model):
     user = models.OneToOneField(User, on_delete=models.CASCADE)
     group = models.ForeignKey(Group, blank=True, null=True)
+
+class PendingChoresUser(models.Model):
+    email = models.CharField(max_length=100)
+    accepted = models.BooleanField(default=False)
+    group = models.ForeignKey(Group, blank=True, null=True)
